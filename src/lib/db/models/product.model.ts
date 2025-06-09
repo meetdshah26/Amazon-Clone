@@ -1,5 +1,5 @@
 import { Document, Model, model, models, Schema } from "mongoose";
-import { IProductInput } from "../../../../types/index";
+import { IProductInput } from "../../../types/index";
 
 export interface IProduct extends Document, IProductInput {
   _id: string;

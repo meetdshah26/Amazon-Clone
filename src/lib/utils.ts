@@ -5,6 +5,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const round2 = (num: number) =>
+  Math.round((num + Number.EPSILON) * 100) / 100;
+
+export const generateId = () =>
+  Array.from({ length: 24 }, () => Math.floor(Math.random() * 10)).join("");
+
 export const formatNumberWithDecimal = (num: number): string => {
   const [int, decimal] = num.toString().split(".");
   return decimal ? `${int}.${decimal.padEnd(2, "0")}` : int;
