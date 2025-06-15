@@ -15,11 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // <>
     <html lang="en">
-      <Header />
-      {/* <body>{children}</body> */}
-      <ClientProviders>{children}</ClientProviders>
-      <Footer />
+      <body>
+        <Header />
+        {/* <body>{children}</body> */}
+        <ClientProviders>{children}</ClientProviders>
+        <Footer />
+        {/* </> */}
+      </body>
     </html>
   );
 }
